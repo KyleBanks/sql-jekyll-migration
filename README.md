@@ -9,10 +9,10 @@ Note: Currently the tool only supports Postgres, but adding support for MySQL, S
 Before running, you'll need to set a few environment variables to tell the program where the Postgres database is. For example:
 
 ```
-DBHOST="localhost"
-DBNAME="blog"
-DBUSER="username"
-DBPASS="password"
+export DBHOST="localhost"
+export DBNAME="blog"
+export DBUSER="username"
+export DBPASS="password"
 ```
 
 ## Running
