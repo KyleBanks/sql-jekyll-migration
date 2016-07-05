@@ -28,7 +28,7 @@ go run migrate.go <TableName> <CollectionPath> <FileNameKey> <ContentKey> <DateK
 - **FileNameKey:** the name of the database column that contains the value to be used as the filename for each row. The name will be lower-cased, non-alphanumeric characters removed, and spaces wil be replaced with hyphens. *ex. "title"*
 - **ContentKey:** the name of the database column that contains the content of the collection file. If you pass a hyphen (`-`) instead of a column name, no content will be added to the file.
 - **DateKey:** the name of the database column that contains the date to be used as the prefix for the filename. If you pass a hyphen (`-`), no date will be prefixed.
-- **FrontMatter:** contains a colon (:) delimited list of key-value pairs, where the key is the database column name, and the value is the Jekyll front matter name.
+- **FrontMatter:** contains a colon (`:`) delimited list of key-value pairs, where the key is the database column name, and the value is the Jekyll front matter name.
     - For example, given the following FrontMatter:
         ```
         post_title=title:post_color=color
@@ -39,7 +39,7 @@ go run migrate.go <TableName> <CollectionPath> <FileNameKey> <ContentKey> <DateK
         color: <post_color value>
         ```
     - **An Important Note:** Whatever values are used for the FileNameKey, ContentKey, and DateKey (except `-`), they MUST also appear as keys in the FrontMatter.
-    - If a hyphen (`-`) is used as they, the value will not be added to the front-matter. This is useful, for example, because you must specify the ContentKey in FrontMatter, but you probably don't actually want it added to the front-matter YAML in the generated file.
+    - If a hyphen (`-`) is used as the key, the value will not be added to the front-matter. This is useful, for example, because you must specify the ContentKey in FrontMatter, but you probably don't actually want it added to the front-matter YAML in the generated file.
 
 ## Example
 
